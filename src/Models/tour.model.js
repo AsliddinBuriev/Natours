@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 const tourSchema = new mongoose.Schema({
 	name: {
 		type: String,
@@ -38,6 +39,13 @@ const tourSchema = new mongoose.Schema({
 	},
 	priceDiscount: {
 		type: Number,
+		validate: {
+			validator: function (dis) {
+				const val = (dis * this.price) / 100;
+				return val < this.price;
+			},
+			message: 'Discount price must be less than regular price',
+		},
 	},
 	summary: {
 		type: String,
@@ -59,10 +67,6 @@ const tourSchema = new mongoose.Schema({
 		select: false,
 	},
 	startDates: [Date],
-	secretTour: {
-		type: Boolean,
-		default: false,
-	},
 });
 
 export default mongoose.model('Tour', tourSchema);
