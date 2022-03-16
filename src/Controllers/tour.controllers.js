@@ -1,5 +1,6 @@
 import Tour from '../Models/tour.model.js';
 import catchAsyncError from '../Utils/catchAsyncError.js';
+import CustomError from '../Utils/CustomError.js';
 
 export const getAllTours = catchAsyncError(async (req, res, next) => {
 	const tours = await Tour.find().select(
@@ -12,6 +13,16 @@ export const getAllTours = catchAsyncError(async (req, res, next) => {
 	});
 });
 
+export const getTour = catchAsyncError(async (req, res, next) => {
+	const tour = await Tour.findById(req.params.id);
+	if (!tour) return next(new CustomError('Tour not found!', 404));
+	res.status(200).json({
+		status: 'SUCCESS',
+		message: 'Tour found!',
+		data: { tour },
+	});
+});
+
 export const createTour = catchAsyncError(async (req, res, next) => {
 	const newTour = await Tour.create(req.body);
 	res.status(201).json({
@@ -21,20 +32,12 @@ export const createTour = catchAsyncError(async (req, res, next) => {
 	});
 });
 
-export const getTour = catchAsyncError(async (req, res, next) => {
-	const tour = await Tour.findById(req.params.id);
-	res.status(200).json({
-		status: 'SUCCESS',
-		message: 'Tour found!',
-		data: { tour },
-	});
-});
-
 export const updateTour = catchAsyncError(async (req, res, next) => {
 	const tour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
 		new: true,
 		runValidators: true,
 	});
+	if (!tour) return next(new CustomError('Tour not found!', 404));
 	res.status(200).json({
 		status: 'SUCCESS',
 		message: 'Tour updated!',
