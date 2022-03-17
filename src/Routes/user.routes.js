@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import multer from '../Utils/multer.file-upload.js';
 import {
 	signup,
 	login,
@@ -27,7 +28,7 @@ router.patch('/update-my-password', updatePassword);
 router
 	.route('/my-profile')
 	.get(getProfile)
-	.patch(updateProfile)
+	.patch(multer.single('avatar'), updateProfile)
 	.delete(deleteUser);
 
 router.use(verifyRole('admin'));

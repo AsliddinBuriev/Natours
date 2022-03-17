@@ -11,7 +11,7 @@ const fileFilter = (req, file, cb) => {
 const storage = multer.memoryStorage();
 
 export default multer({
-	limits: { fileSize: 1048576 * 15 },
+	limits: { fileSize: 1048576 * 2 },
 	fileFilter,
 	storage,
 });
