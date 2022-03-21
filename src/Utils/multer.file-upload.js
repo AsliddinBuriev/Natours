@@ -10,8 +10,14 @@ const fileFilter = (req, file, cb) => {
 };
 const storage = multer.memoryStorage();
 
-export default multer({
-	limits: { fileSize: 1048576 * 2 },
+const upload = multer({
+	limits: { fileSize: 1048576 },
 	fileFilter,
 	storage,
 });
+
+export const multerForUsers = upload.single('photo');
+export const multerForTours = upload.fields([
+	{ name: 'imageCover', maxCount: 1 },
+	{ name: 'images', maxCount: 4 },
+]);

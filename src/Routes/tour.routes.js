@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { multerForTours } from '../Utils/multer.file-upload.js';
 import {
 	getAllTours,
 	createTour,
@@ -12,7 +13,7 @@ const router = Router();
 router.get('/', getAllTours);
 router.route('/:id').get(getTour);
 router.use(verifyLogin, verifyRole('admin'));
-router.post('/', createTour);
-router.route('/:id').patch(updateTour).delete(deleteTour);
+router.post('/', multerForTours, createTour);
+router.route('/:id').patch(multerForTours, updateTour).delete(deleteTour);
 
 export default router;

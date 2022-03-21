@@ -16,6 +16,11 @@ const userSchema = new mongoose.Schema({
 			message: '{VALUE} is not a valid email',
 		},
 	},
+	photo: {
+		type: String,
+		default:
+			'https://natours-storage.s3.ap-northeast-2.amazonaws.com/User/images/avatar.webp',
+	},
 	role: {
 		type: String,
 		enum: ['user', 'admin'],
@@ -27,7 +32,6 @@ const userSchema = new mongoose.Schema({
 		minlength: [8, 'Password must be at least 8 characters'],
 		select: false,
 	},
-	photo: String,
 	pwdChangedAt: {
 		type: Date,
 		select: false,
