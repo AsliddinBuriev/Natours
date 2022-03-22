@@ -53,6 +53,7 @@ export const createTour = catchAsyncError(async (req, res, next) => {
 
 export const updateTour = catchAsyncError(async (req, res, next) => {
 	const { files, body } = req;
+
 	const oldTour = await Tour.findById(req.params.id);
 	if (!oldTour) return next(new CustomError('Tour not found!', 404));
 	if (files) {

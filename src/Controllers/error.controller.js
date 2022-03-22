@@ -7,7 +7,7 @@ export default (err, req, res, next) => {
 };
 
 function devError(res, err) {
-	// console.log(err);
+	console.log(err);
 	res.status(err.statusCode).json({
 		status: err.status,
 		message: err.message,
