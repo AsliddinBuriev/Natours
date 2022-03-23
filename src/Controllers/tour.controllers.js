@@ -53,7 +53,6 @@ export const createTour = catchAsyncError(async (req, res, next) => {
 
 export const updateTour = catchAsyncError(async (req, res, next) => {
 	const { files, body } = req;
-
 	const oldTour = await Tour.findById(req.params.id);
 	if (!oldTour) return next(new CustomError('Tour not found!', 404));
 	if (files) {
@@ -66,6 +65,9 @@ export const updateTour = catchAsyncError(async (req, res, next) => {
 		if (files.images) {
 			let pathPointer = 0;
 			let filePointer = 0;
+			if (!Array.isArray(body.images)) {
+				body.images = body.images ? [body.images] : [];
+			}
 			if (body.images.length + files.images.length > 5)
 				return next(
 					new CustomError('A tour can have only 5 images!', 400)
@@ -73,7 +75,7 @@ export const updateTour = catchAsyncError(async (req, res, next) => {
 			while (pathPointer < 4 && filePointer < files.images.length) {
 				const path = `Tour/${oldTour._id}/image-${pathPointer}.webp`;
 				if (!body.images.includes(path)) {
-					const image = files.images[i].buffer;
+					const image = files.images[filePointer].buffer;
 					body.images.push(await s3.getImageUrl(path, image));
 					filePointer++;
 				}
