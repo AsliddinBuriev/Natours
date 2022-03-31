@@ -17,18 +17,23 @@ export default class S3Bucket {
 		});
 	}
 	async editImage(image) {
-		return await sharp(image).webp({ lossless: true }).toBuffer();
+		return await sharp(image).jpeg({ lossless: true }).toBuffer();
 	}
 
 	async uploadImage(Key, Body) {
-		const params = {
-			Bucket: this.bucketName,
-			Key,
-			Body,
-			ACL: 'public-read',
-		};
-		const command = new PutObjectCommand(params);
-		return await this.client.send(command);
+		try {
+			const params = {
+				Bucket: this.bucketName,
+				Key: `${Key}.jpeg`,
+				Body,
+				ACL: 'public-read',
+				ContentType: 'image/jpeg',
+			};
+			const command = new PutObjectCommand(params);
+			return await this.client.send(command);
+		} catch (err) {
+			console.log(err);
+		}
 	}
 
 	async getImageUrl(name, image) {
@@ -37,7 +42,7 @@ export default class S3Bucket {
 			await this.editImage(image)
 		);
 		if (result.$metadata.httpStatusCode === 200)
-			return `https://${this.bucketName}.s3.${this.bucketRegion}.amazonaws.com/${name}`;
+			return `https://${this.bucketName}.s3.${this.bucketRegion}.amazonaws.com/${name}.jpeg`;
 	}
 
 	async deleteImage(Key) {

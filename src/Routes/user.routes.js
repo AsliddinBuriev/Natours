@@ -33,6 +33,6 @@ router
 
 router.use(verifyRole('admin'));
 
-router.route('/:id').delete(deleteUser);
+router.route('/:userId').delete(deleteUser);
 router.get('/', getAllUsers);
 export default router;

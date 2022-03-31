@@ -15,7 +15,7 @@ export const getAllTours = catchAsyncError(async (req, res, next) => {
 });
 
 export const getTour = catchAsyncError(async (req, res, next) => {
-	const tour = await Tour.findById(req.params.id);
+	const tour = await Tour.findById(req.params.tourId).populate('reviews');
 	if (!tour) return next(new CustomError('Tour not found!', 404));
 	res.status(200).json({
 		status: 'SUCCESS',
@@ -30,14 +30,14 @@ export const createTour = catchAsyncError(async (req, res, next) => {
 	if (files) {
 		const s3 = new S3(next);
 		if (files.imageCover) {
-			const path = `Tour/${newTour._id}/coverImage.webp`;
+			const path = `Tour/${newTour._id}/coverImage`;
 			const image = files.imageCover[0].buffer;
 			newTour.imageCover = await s3.getImageUrl(path, image);
 		}
 		if (files.images) {
 			newTour.images = [];
 			for (let i = 0; i < files.images.length; i++) {
-				const path = `Tour/${newTour._id}/image-${i}.webp`;
+				const path = `Tour/${newTour._id}/image-${i}`;
 				const image = files.images[i].buffer;
 				newTour.images.push(await s3.getImageUrl(path, image));
 			}
@@ -53,12 +53,12 @@ export const createTour = catchAsyncError(async (req, res, next) => {
 
 export const updateTour = catchAsyncError(async (req, res, next) => {
 	const { files, body } = req;
-	const oldTour = await Tour.findById(req.params.id);
+	const oldTour = await Tour.findById(req.params.tourId);
 	if (!oldTour) return next(new CustomError('Tour not found!', 404));
 	if (files) {
 		const s3 = new S3(next);
 		if (files.imageCover) {
-			const path = `Tour/${oldTour._id}/coverImage.webp`;
+			const path = `Tour/${oldTour._id}/coverImage`;
 			const image = files.imageCover[0].buffer;
 			body.imageCover = await s3.getImageUrl(path, image);
 		}
@@ -73,7 +73,7 @@ export const updateTour = catchAsyncError(async (req, res, next) => {
 					new CustomError('A tour can have only 5 images!', 400)
 				);
 			while (pathPointer < 4 && filePointer < files.images.length) {
-				const path = `Tour/${oldTour._id}/image-${pathPointer}.webp`;
+				const path = `Tour/${oldTour._id}/image-${pathPointer}`;
 				if (!body.images.includes(path)) {
 					const image = files.images[filePointer].buffer;
 					body.images.push(await s3.getImageUrl(path, image));
@@ -83,7 +83,7 @@ export const updateTour = catchAsyncError(async (req, res, next) => {
 			}
 		}
 	}
-	const updatedTour = await Tour.findByIdAndUpdate(req.params.id, body, {
+	const updatedTour = await Tour.findByIdAndUpdate(req.params.tourId, body, {
 		new: true,
 		runValidators: true,
 	});
@@ -95,7 +95,7 @@ export const updateTour = catchAsyncError(async (req, res, next) => {
 });
 
 export const deleteTour = catchAsyncError(async (req, res, next) => {
-	await Tour.findByIdAndDelete(req.params.id);
+	await Tour.findByIdAndDelete(req.params.tourId);
 	res.status(200).json({
 		status: 'SUCCESS',
 		message: 'Tour deleted!',

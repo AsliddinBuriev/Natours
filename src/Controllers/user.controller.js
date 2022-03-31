@@ -9,7 +9,7 @@ export const updateProfile = catchAsyncError(async (req, res, next) => {
 		if (body[el]) delete body[el];
 	});
 	if (file) {
-		const path = `User/images/${req.user._id}.webp`;
+		const path = `User/images/${req.user._id}`;
 		const image = file.buffer;
 		const s3 = new S3();
 		body.photo = await s3.getImageUrl(path, image);
@@ -49,10 +49,10 @@ export const getProfile = catchAsyncError(async (req, res, next) => {
 });
 
 export const deleteUser = catchAsyncError(async (req, res, next) => {
-	const user = await User.findByIdAndDelete(req.params.id);
+	await User.findByIdAndDelete(req.params.userId);
 	res.status(200).json({
 		status: 'success',
 		message: 'User deleted',
-		data: { user },
+		data: null,
 	});
 });
