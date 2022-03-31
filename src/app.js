@@ -20,7 +20,7 @@ app.use(xssClean());
 app.use(ExpressMongoSanitize());
 const limiter = rateLimit({
 	windowMs: 10 * 60 * 1000,
-	max: 100,
+	max: 101,
 });
 app.use(limiter);
 app.use('/api/v1/tours', tourRouter);
