@@ -1,9 +1,13 @@
 import { Router } from 'express';
 import { verifyLogin, verifyRole } from '../Controllers/auth.controller.js';
-import { paymentIntent } from '../Controllers/booking.controller.js';
+import {
+	paymentIntent,
+	createBooking,
+} from '../Controllers/booking.controller.js';
 
 const router = Router();
 
-router.post('/create-payment-intent', verifyLogin, paymentIntent);
+router.get('/create-payment-intent/:tourId', verifyLogin, paymentIntent);
 
+router.post('/create-booking', createBooking);
 export default router;

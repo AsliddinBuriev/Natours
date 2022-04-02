@@ -14,6 +14,7 @@ import {
 	updateProfile,
 	getProfile,
 	deleteUser,
+	getMyBookings,
 } from '../Controllers/user.controller.js';
 
 const router = Router();
@@ -30,7 +31,7 @@ router
 	.get(getProfile)
 	.patch(multerForUsers, updateProfile)
 	.delete(deleteUser);
-
+router.get('/get-my-bookings', getMyBookings);
 router.use(verifyRole('admin'));
 
 router.route('/:userId').delete(deleteUser);

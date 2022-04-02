@@ -20,15 +20,4 @@ const BookingSchema = new mongoose.Schema({
 		default: Date.now(),
 	},
 });
-
-BookingSchema.pre(/^find/, function (next) {
-	this.populate({
-		path: 'user',
-		select: 'name photo',
-	}).populate({
-		path: 'tour',
-		select: 'name imageCover',
-	});
-	next();
-});
 export default mongoose.model('Booking', BookingSchema);

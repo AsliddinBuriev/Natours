@@ -1,4 +1,5 @@
 import User from '../Models/user.model.js';
+import Booking from '../Models/booking.model.js';
 import catchAsyncError from '../Utils/catchAsyncError.js';
 import S3 from '../Utils/S3Bucket.js';
 
@@ -54,5 +55,19 @@ export const deleteUser = catchAsyncError(async (req, res, next) => {
 		status: 'success',
 		message: 'User deleted',
 		data: null,
+	});
+});
+
+export const getMyBookings = catchAsyncError(async (req, res, next) => {
+	const bookings = await Booking.find({ user: req.user._id })
+		.populate({
+			path: 'tour',
+			select: '-__v -images -createdAt',
+		})
+		.select('-__v -user');
+	res.status(200).json({
+		status: 'success',
+		message: 'User bookings',
+		data: { bookings },
 	});
 });

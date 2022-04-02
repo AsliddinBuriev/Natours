@@ -38,9 +38,12 @@ function prodError(res, err) {
 }
 
 function duplicateKey(err) {
-	const message = `This ${
-		Object.keys(err.keyValue)[0]
-	} has already been used!`;
+	let message;
+	if (err.keyValue.email) {
+		message = `This ${Object.keys(err.keyValue)[0]} has already been used!`;
+	} else if (err.keyValue.tour && err.keyValue.user) {
+		message = 'You can review a tour only once!';
+	}
 	return new CustomError(message, 400);
 }
 function castError(err) {

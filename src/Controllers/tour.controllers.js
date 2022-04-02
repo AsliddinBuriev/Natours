@@ -4,9 +4,7 @@ import CustomError from '../Utils/CustomError.js';
 import S3 from '../Utils/S3Bucket.js';
 
 export const getAllTours = catchAsyncError(async (req, res, next) => {
-	const tours = await Tour.find().select(
-		'-__v -maxGroupSize -description -images -startDates -secretTour'
-	);
+	const tours = await Tour.find().select('-__v -images -createdAt');
 	res.status(200).json({
 		status: 'SUCCESS',
 		message: 'All tours!',

@@ -1,27 +1,45 @@
 import Booking from '../Models/booking.model.js';
 import Tour from '../Models/tour.model.js';
+import User from '../Models/user.model.js';
+import { jwtSign, jwtVerify } from '../Utils/jwt.js';
 import catchAsyncError from '../Utils/catchAsyncError.js';
 import CustomError from '../Utils/CustomError.js';
 import Stripe from 'stripe';
 
 export const paymentIntent = catchAsyncError(async (req, res, next) => {
+	const tour = await Tour.findById(req.params.tourId);
 	const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
-	const { paymentMethodType, currency, paymentMethodOptions } = req.body;
+	const paymentToken = await jwtSign({
+		tourId: tour._id,
+		userId: req.user._id,
+		price: tour.price,
+	});
 	const params = {
-		payment_method_types: [paymentMethodType],
-		amount: 1999,
-		currency: currency,
+		currency: 'usd',
+		payment_method_types: ['card'],
+		amount: tour.price * 100,
+		description: tour.summary,
+		receipt_email: req.user.email,
 	};
 	const paymentIntent = await stripe.paymentIntents.create(params);
-	res.send({
+	res.status(200).json({
+		status: 'success',
+		message: 'Payment intent created',
 		clientSecret: paymentIntent.client_secret,
+		paymentToken,
 	});
 });
 
 export const createBooking = catchAsyncError(async (req, res, next) => {
-	const { tour, user, price } = req.query;
-	if (!tour || !user || !price)
-		return next(new CustomError('Invalid request', 400));
-	await Booking.create({ tour, user, price });
-	res.redirect(req.originalUrl.split('?')[0]);
+	const decoded = await jwtVerify(req.body.paymentToken);
+	if (!decoded) return next(new CustomError('Invalid payment token', 400));
+	await Booking.create({
+		tour: decoded.id.tourId,
+		user: decoded.id.userId,
+		price: decoded.id.price,
+	});
+	res.status(200).json({
+		status: 'success',
+		message: 'Booking created',
+	});
 });

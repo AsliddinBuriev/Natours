@@ -51,5 +51,10 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPwd = async (pwd, hash) => {
 	return await bcrypt.compare(pwd, hash);
 };
+userSchema.virtual('bookings', {
+	ref: 'Booking',
+	localField: '_id',
+	foreignField: 'user',
+});
 
 export default mongoose.model('User', userSchema);

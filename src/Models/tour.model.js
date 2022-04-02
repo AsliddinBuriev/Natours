@@ -34,16 +34,6 @@ const tourSchema = new mongoose.Schema(
 			type: Number,
 			required: [true, 'A tour must have a price'],
 		},
-		priceDiscount: {
-			type: Number,
-			validate: {
-				validator: function (dis) {
-					const val = (dis * this.price) / 100;
-					return val < this.price;
-				},
-				message: 'Discount price must be less than regular price',
-			},
-		},
 		summary: {
 			type: String,
 			trim: true,
@@ -63,19 +53,15 @@ const tourSchema = new mongoose.Schema(
 			default: Date.now(),
 			select: false,
 		},
-		startDates: [Date],
-		locations: [
-			{
-				type: {
-					type: String,
-					default: 'Point',
-				},
-				coordinates: [Number],
-				address: String,
-				description: String,
-				day: Number,
-			},
-		],
+		startDates: {
+			type: Date,
+			required: [true, 'A tour must have a start date'],
+		},
+		location: {
+			type: String,
+			place: [true, 'A tour must have a place'],
+		},
+		stops: [String],
 	},
 	{
 		toJSON: { virtuals: true },
