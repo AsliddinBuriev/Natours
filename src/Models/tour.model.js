@@ -58,10 +58,10 @@ const tourSchema = new mongoose.Schema(
 			required: [true, 'A tour must have a start date'],
 		},
 		location: {
-			type: String,
-			place: [true, 'A tour must have a place'],
+			place: String,
+			coordiantes: Array,
 		},
-		stops: [String],
+		stops: [Array],
 	},
 	{
 		toJSON: { virtuals: true },
