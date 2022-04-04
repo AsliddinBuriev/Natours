@@ -59,9 +59,11 @@ const tourSchema = new mongoose.Schema(
 		},
 		location: {
 			place: String,
-			coordiantes: Array,
+			lat: String,
+			lng: String,
 		},
-		stops: [Array],
+		stops: [Object],
+		stops: [Object],
 	},
 	{
 		toJSON: { virtuals: true },
