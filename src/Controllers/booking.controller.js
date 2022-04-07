@@ -43,3 +43,34 @@ export const createBooking = catchAsyncError(async (req, res, next) => {
 		message: 'Booking created',
 	});
 });
+
+export const getMyBookings = catchAsyncError(async (req, res, next) => {
+	const bookings = await Booking.find({ user: req.user._id })
+		.populate({
+			path: 'tour',
+			select: '-__v -images -createdAt',
+		})
+		.select('-__v -user');
+	res.status(200).json({
+		status: 'success',
+		message: 'User bookings',
+		data: { bookings },
+	});
+});
+
+export const getAllBookings = catchAsyncError(async (req, res, next) => {
+	const bookings = await Booking.find({ tour: req.params.tourId })
+		.populate({
+			path: 'tour',
+			select: '-__v -images -createdAt',
+		})
+		.populate({
+			path: 'user',
+			select: 'name photo',
+		});
+	res.status(200).json({
+		status: 'success',
+		message: 'User bookings',
+		data: { bookings },
+	});
+});

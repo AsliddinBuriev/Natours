@@ -1,1 +1,223 @@
-<mxfile host="Electron" modified="2022-03-27T08:11:31.794Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/17.2.1 Chrome/96.0.4664.174 Electron/16.1.0 Safari/537.36" etag="VQx2E-FY399qv2aGxVe0" version="17.2.1" type="device"><diagram id="lxCuO6DBVW09Tj_Unnxz" name="Authentication">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</diagram></mxfile>
+<mxfile host="65bd71144e">
+    <diagram id="lxCuO6DBVW09Tj_Unnxz" name="Authentication">
+        <mxGraphModel dx="802" dy="378" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="kdot5zfLDeKO1TMDOAHh-2" target="kdot5zfLDeKO1TMDOAHh-17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-2" value="Sign up" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="129" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="kdot5zfLDeKO1TMDOAHh-17" target="kdot5zfLDeKO1TMDOAHh-21" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-17" value="get user data&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="221" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=18;fontColor=default;" parent="1" source="kdot5zfLDeKO1TMDOAHh-21" target="kdot5zfLDeKO1TMDOAHh-27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-21" value="encrypt password before saving in db" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="310" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-27" value="send token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="404" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-37" target="kdot5zfLDeKO1TMDOAHh-39" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-37" value="Log in&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="522" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-39" target="kdot5zfLDeKO1TMDOAHh-41" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-39" value="check if user exist&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="614" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=18;fontColor=default;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-41" target="kdot5zfLDeKO1TMDOAHh-42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-41" value="compare password" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="703" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-42" value="send token&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="797" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-44" target="kdot5zfLDeKO1TMDOAHh-46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-44" value="Protect routes" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1169" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-46" target="kdot5zfLDeKO1TMDOAHh-48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-46" value="verify and decode token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1261" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=18;fontColor=default;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-48" target="kdot5zfLDeKO1TMDOAHh-49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-48" value="check if decoded user exist" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1350" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-49" value="check if password hasn't changed using other device" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1444" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-58" target="kdot5zfLDeKO1TMDOAHh-60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-58" value="Update password" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1571" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-60" target="kdot5zfLDeKO1TMDOAHh-62" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-60" value="get old and new password" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1663" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=18;fontColor=default;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="kdot5zfLDeKO1TMDOAHh-62" target="kdot5zfLDeKO1TMDOAHh-63" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-62" target="kdot5zfLDeKO1TMDOAHh-63" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-62" value="compare user's old and encrypted password" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1752" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-63" value="set new password and send new token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="72" y="1846" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-65" target="kdot5zfLDeKO1TMDOAHh-67" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-65" value="Forget Pasword" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="2379" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-67" target="kdot5zfLDeKO1TMDOAHh-69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-67" value="check if user exist" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="2471" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-69" value="generate temorary password&amp;nbsp;&lt;br&gt;send unencryped version to user email&lt;br&gt;save enrypted version in databese (limit time)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="2560" width="438" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-71" value="encryption: bcrypt.js&lt;br&gt;file upload: multer&lt;br&gt;image editor: sharp" style="whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="545" y="227" width="245" height="196" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-73" value="random pwd: node crypto&lt;br&gt;email sending: nodemailer&lt;br&gt;email testing: mail trap" style="whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="545" y="2394" width="245" height="196" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-75" target="kdot5zfLDeKO1TMDOAHh-77" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-75" value="Resent Password" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="2708" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="kdot5zfLDeKO1TMDOAHh-77" target="kdot5zfLDeKO1TMDOAHh-78" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-77" value="find user based on reset password token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="2800" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="kdot5zfLDeKO1TMDOAHh-78" target="kdot5zfLDeKO1TMDOAHh-79" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-78" value="update users password&amp;nbsp;&lt;br&gt;set tepmorary password to null" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="2889" width="438" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="kdot5zfLDeKO1TMDOAHh-79" value="send token to user" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="2986" width="438" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="S1NJIhTF3uRi_mCzJhoF-5" target="S1NJIhTF3uRi_mCzJhoF-7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-5" value="Update user profile" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="3386" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="S1NJIhTF3uRi_mCzJhoF-7" target="i0ZaenPGTJbmLUqWFvoU-1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-7" value="set up file upload" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="3478" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="S1NJIhTF3uRi_mCzJhoF-9" target="S1NJIhTF3uRi_mCzJhoF-10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-9" value="&lt;span&gt;make specified fields updatable&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="3676" width="438" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-10" value="update user data&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="3773" width="438" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1NJIhTF3uRi_mCzJhoF-11" value="file upload : multer&lt;br&gt;cloud file storage: S3 bucket" style="whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="571" y="3453" width="245" height="196" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="i0ZaenPGTJbmLUqWFvoU-1" target="S1NJIhTF3uRi_mCzJhoF-9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-1" value="upload images on cloud" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="3580" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="i0ZaenPGTJbmLUqWFvoU-5" target="i0ZaenPGTJbmLUqWFvoU-7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="i0ZaenPGTJbmLUqWFvoU-5" target="i0ZaenPGTJbmLUqWFvoU-13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-5" value="Update Tour data" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="3913" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="i0ZaenPGTJbmLUqWFvoU-7" target="i0ZaenPGTJbmLUqWFvoU-12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-7" value="set up file upload" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="4005" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-10" value="update user data&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="4207" width="438" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="i0ZaenPGTJbmLUqWFvoU-12" target="i0ZaenPGTJbmLUqWFvoU-10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-12" value="upload images on cloud" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="4107" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-13" value="Access Role: Admin" style="whiteSpace=wrap;html=1;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="3913" width="218" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="i0ZaenPGTJbmLUqWFvoU-18" target="i0ZaenPGTJbmLUqWFvoU-20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-18" value="Delete my-profile&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="4450" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-20" value="visibility: false" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="4542" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="i0ZaenPGTJbmLUqWFvoU-29" target="i0ZaenPGTJbmLUqWFvoU-30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-29" value="Delete tour" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="4666" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="i0ZaenPGTJbmLUqWFvoU-30" value="visibility: false" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="27" y="4758" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Om07xkiv6Sem02ryx13h-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fillColor=#fff2cc;strokeColor=#000000;" parent="1" source="Om07xkiv6Sem02ryx13h-2" target="Om07xkiv6Sem02ryx13h-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Om07xkiv6Sem02ryx13h-2" value="GET ALL REVIEWS" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="5567" width="438" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Om07xkiv6Sem02ryx13h-3" value="visibility: false" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="38" y="5659" width="438" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

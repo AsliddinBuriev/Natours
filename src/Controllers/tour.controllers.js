@@ -1,7 +1,9 @@
 import Tour from '../Models/tour.model.js';
+import Review from '../Models/review.model.js';
 import catchAsyncError from '../Utils/catchAsyncError.js';
 import CustomError from '../Utils/CustomError.js';
 import S3 from '../Utils/S3Bucket.js';
+import Booking from '../Models/booking.model.js';
 
 export const getAllTours = catchAsyncError(async (req, res, next) => {
 	const tours = await Tour.find().select('-__v -images -createdAt');
@@ -13,8 +15,15 @@ export const getAllTours = catchAsyncError(async (req, res, next) => {
 });
 
 export const getTour = catchAsyncError(async (req, res, next) => {
-	const tour = await Tour.findById(req.params.tourId).populate('reviews');
-	if (!tour) return next(new CustomError('Tour not found!', 404));
+	const tourDoc = await Tour.findById(req.params.tourId);
+	if (!tourDoc) return next(new CustomError('Tour not found!', 404));
+	const tour = tourDoc.toObject();
+	tour.reviews = await Review.find({ tour: tour._id })
+		.populate({
+			path: 'user',
+			select: 'name photo',
+		})
+		.select('-__v -tour');
 	res.status(200).json({
 		status: 'SUCCESS',
 		message: 'Tour found!',
@@ -26,7 +35,7 @@ export const createTour = catchAsyncError(async (req, res, next) => {
 	const { files, body } = req;
 	let newTour = new Tour(body);
 	if (files) {
-		const s3 = new S3(next);
+		const s3 = new S3();
 		if (files.imageCover) {
 			const path = `Tour/${newTour._id}/coverImage`;
 			const image = files.imageCover[0].buffer;
@@ -54,7 +63,7 @@ export const updateTour = catchAsyncError(async (req, res, next) => {
 	const oldTour = await Tour.findById(req.params.tourId);
 	if (!oldTour) return next(new CustomError('Tour not found!', 404));
 	if (files) {
-		const s3 = new S3(next);
+		const s3 = new S3();
 		if (files.imageCover) {
 			const path = `Tour/${oldTour._id}/coverImage`;
 			const image = files.imageCover[0].buffer;
@@ -93,7 +102,12 @@ export const updateTour = catchAsyncError(async (req, res, next) => {
 });
 
 export const deleteTour = catchAsyncError(async (req, res, next) => {
-	await Tour.findByIdAndDelete(req.params.tourId);
+	const deletedTour = await Tour.findByIdAndDelete(req.params.tourId);
+	if (!deletedTour) return next(new CustomError('Tour not found!', 404));
+	await Review.deleteMany({ tour: req.params.tourId });
+	await Booking.deleteMany({ tour: req.params.tourId });
+	const s3 = new S3();
+	await s3.deleteImage(`Tour/${req.params.tourId}`);
 	res.status(200).json({
 		status: 'SUCCESS',
 		message: 'Tour deleted!',

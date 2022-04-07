@@ -5,7 +5,12 @@ import catchAsync from '../Utils/catchAsyncError.js';
 import CustomError from '../Utils/CustomError.js';
 
 export const getAllReviews = catchAsync(async (req, res, next) => {
-	const reviews = await Review.find({ tour: req.params.tourId });
+	const reviews = await Review.find({ tour: req.params.tourId })
+		.populate({
+			path: 'user',
+			select: 'name photo',
+		})
+		.select('-__v -tour');
 	res.status(200).json({
 		status: 'success',
 		result: reviews.length,
@@ -28,6 +33,17 @@ export const createReview = catchAsync(async (req, res, next) => {
 	});
 });
 
+export const myReviews = catchAsync(async (req, res, next) => {
+	const reviews = await Review.find({ user: req.user._id }).populate({
+		path: 'tour',
+		select: '-__v -images -createdAt',
+	});
+	res.status(200).json({
+		status: 'success',
+		data: { reviews },
+	});
+});
+
 export const updateReview = catchAsync(async (req, res, next) => {
 	let review = await Review.findById(req.params.reviewId);
 	if (!review) return next(new CustomError('The review is not found!', 404));
@@ -47,13 +63,12 @@ export const updateReview = catchAsync(async (req, res, next) => {
 });
 
 export const deleteReview = catchAsync(async (req, res, next) => {
-	const review = await Review.findById(req.params.reviewId);
+	const review = await Review.findByIdAndDelete(req.params.reviewId);
 	if (!review) return next(new CustomError('The review is not found!', 404));
 	if (review.user._id.toString() !== req.user._id.toString())
 		return next(
 			new CustomError('You are not allowed to delete this review!', 401)
 		);
-	await Review.findByIdAndDelete(req.params.reviewId);
 	await Review.calcAverageRatings(review.tour);
 	res.status(200).json({
 		status: 'success',

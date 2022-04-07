@@ -8,6 +8,7 @@ import rateLimit from 'express-rate-limit';
 import tourRouter from './Routes/tour.routes.js';
 import userRouter from './Routes/user.routes.js';
 import bookingRouter from './Routes/booking.routes.js';
+import reviewRouter from './Routes/review.routes.js';
 import CustomError from './Utils/CustomError.js';
 import errorController from './Controllers/error.controller.js';
 const app = express();
@@ -25,6 +26,7 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/bookings', bookingRouter);
 app.use('*', (req, res, next) => {
 	next(new CustomError('No such route on this server!', 404));

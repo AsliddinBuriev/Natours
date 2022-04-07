@@ -10,11 +10,11 @@ import {
 	resetPassword,
 } from '../Controllers/auth.controller.js';
 import {
-	getAllUsers,
-	updateProfile,
 	getProfile,
+	updateProfile,
+	deleteProfile,
+	getAllUsers,
 	deleteUser,
-	getMyBookings,
 } from '../Controllers/user.controller.js';
 
 const router = Router();
@@ -30,8 +30,7 @@ router
 	.route('/my-profile')
 	.get(getProfile)
 	.patch(multerForUsers, updateProfile)
-	.delete(deleteUser);
-router.get('/get-my-bookings', getMyBookings);
+	.delete(deleteProfile);
 router.use(verifyRole('admin'));
 
 router.route('/:userId').delete(deleteUser);
